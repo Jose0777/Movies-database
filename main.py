@@ -7,11 +7,7 @@ from wtforms.validators import DataRequired
 import requests
 import os
 
-# require('dotenv').config();
-API_KEY_MOVIE=API_KEY_MOVIE
-APP_CONFIG_SECRET_KEY=APP_CONFIG_SECRET_KEY
-
-API_KEY= API_KEY_MOVIE
+API_KEY = os.environ.get("API_KEY_MOVIE")
 movie_endpoint = "https://api.themoviedb.org/3/search/movie"
 
 app = Flask(__name__)
